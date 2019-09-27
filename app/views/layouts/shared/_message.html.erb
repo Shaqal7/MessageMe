@@ -1,8 +1,7 @@
-<% unless flash.empty? %>
-<script type="text/javascript" >
-  <% flash.each do | key,value | %>
-  <% type = key.to_s.gsub('alert', 'error').gsub('notice', 'success') %>
-  toastr['<%= type %>']('<%= value %>')
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <div class="alert alert-<%= name.to_s == 'notice' ? 'success' : 'danger' %>">
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    </div>
   <% end %>
-</script>
 <% end %>
