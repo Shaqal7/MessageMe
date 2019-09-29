@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def create
     message = current_user.messages.build(message_params)
     if message.save
-      ActionCable.server.broadcast "chatroom_channel", content: message.body
+      ActionCable.server.broadcast "chatroom_channel", content: [current_user.email, message, (message.created_at).strftime("%F %T" )]
     else
       redirect_to root_path
     end

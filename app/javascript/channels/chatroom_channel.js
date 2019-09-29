@@ -12,23 +12,10 @@ consumer.subscriptions.create("ChatroomChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    console.log("Recieving:")
-    console.log(data.content)
-
-    $('#msg').append('<div class="message"> ' + data.content + '</div>')
+    //$('#msg').append(data.content[0]);
+    $('#msg').append('<div class="event"><div class="content"><div class="summary"><em> ' + data.content[0] + '</em>:' + data.content[1].body + '<div class="time_to_right">' + data.content[2] + '</div></div></div></div>')
+    //$('#msg').append('<div class="message"> ' + data.content + '</div>')
   }
 });
 
-let submit_messages;
-$(document).on('turbolinks:load', function () {
-  submit_messages()
-})
-submit_messages = function () {
-  $('#message_content').on('keydown', function (event) {
-    if (event.keyCode == 13) {
-      $('input').click()
-      event.target.value = ''
-      event.preventDefault()
-    }
-  })
-}
+
