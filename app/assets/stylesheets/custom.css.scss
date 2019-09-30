@@ -1,4 +1,5 @@
 @import "semantic-ui";
+$bp-medium: 50em; // 800px
 
 .chatbox {
   height: 450px;
@@ -11,4 +12,19 @@
 #messages {
   height: 15em;
   overflow: auto;
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .sidebar-right {
+    display: hidden;
+  }
+  .logo {
+    display: none;
+  }
+  .container {
+    display: table;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 90% !important;
+  }
 }
