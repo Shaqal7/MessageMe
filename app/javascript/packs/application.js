@@ -18,3 +18,25 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 //
+
+function gotoBottom(id){
+  var element = document.getElementById('messages');
+  element.scrollTop = element.scrollHeight - element.clientHeight;
+}
+
+
+// $('html, body').animate({
+//   //scrollTop: $('footer').offset().top
+//   scrollTop: $('#messages').offset().top
+//   //scrollTop: $('.your-class').offset().top
+// }, 'slow');
+
+// scroll_bottom = function() {
+//   if ($('#messages').length > 0) {
+//     $('#messages').scrollTop($('messages')[0].scrollHeight);
+//   }
+// }
+
+$(document).on('turbolinks:load', function() {
+  gotoBottom('messages');
+})
