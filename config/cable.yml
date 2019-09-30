@@ -7,5 +7,5 @@ test:
 production:
   adapter: redis
   #url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  url: <%= ENV.fetch("REDIS_URL") { "redis://h:pd393a4fb31553d63c1e672fbe9413b29ae137d90aaeb8aa2013ab042b1b658c1@ec2-34-252-8-107:eu-west-1:compute:amazonaws:com:24639" } %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://h:p2cc58bd9c3b7e9b0e2fafdacbde84e540935290bfc910fa4487cf4eda19f6120@ec2-99-81-212-149.eu-west-1.compute.amazonaws.com:14789" } %>
   channel_prefix: MessageMe_production
