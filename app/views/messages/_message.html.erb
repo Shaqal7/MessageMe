@@ -1,8 +1,8 @@
 <div class="event">
   <div class="content">
-    <div class="summary ">
-      <em><%= message.user.email %></em>: <%= message.body %>
-      <div class="time_to_right"><%= (message.created_at).strftime("%F %T" ) %></div>
+    <div class="summary">
+      <em class="nickname"><%= message.user.email %></em>: <%= message.body %>
+      <div class="time_to_right time"><%= time_ago_in_words(message.created_at) %> ago</div>
     </div>
   </div>
 </div>

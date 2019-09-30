@@ -14,6 +14,15 @@ $bp-medium: 62.5em; // 1000px
   overflow: auto;
 }
 
+.nickname {
+  color: #9B393C;
+}
+
+.time {
+  color: #6B6865;
+  font-weight: 100;
+}
+
 @media only screen and (max-width: $bp-medium) {
   .logo {
     display: none;
@@ -22,4 +31,11 @@ $bp-medium: 62.5em; // 1000px
     margin-top: 10px;
     width: 95vw !important;
   }
+
+  /* In site.variables */
+  @tabletBreakpoint : 768px;
+  @scrollbarWidth : 17px; /* This is a constant */
+  /* In container.variables */
+  @tabletMinimumGutter : (@emSize  * 1); /* require 1em gutter */
+  @tabletWidth : @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
 }
