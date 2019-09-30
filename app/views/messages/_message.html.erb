@@ -7,7 +7,7 @@
         <em class="nickname-2"><%= message.user.email %></em>
       <% end%>
       : <%= message.body %>
-      <div class="time_to_right time"><%= (message.created_at).strftime("%T %d/%m" ) %></div>
+      <div class="time_to_right time"><%= time_ago_in_words(message.created_at) %> ago</div>
     </div>
   </div>
 </div>
