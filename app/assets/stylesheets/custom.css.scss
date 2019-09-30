@@ -27,18 +27,8 @@ $bp-medium: 62.5em; // 1000px
 }
 
 @media only screen and (max-width: $bp-medium) {
-  .logo {
-    display: none;
-  }
   .sidebar-left {
     margin-top: 10px;
     width: 95vw !important;
   }
-
-  /* In site.variables */
-  @tabletBreakpoint : 768px;
-  @scrollbarWidth : 17px; /* This is a constant */
-  /* In container.variables */
-  @tabletMinimumGutter : (@emSize  * 1); /* require 1em gutter */
-  @tabletWidth : @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
 }
