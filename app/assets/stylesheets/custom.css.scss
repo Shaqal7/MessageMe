@@ -1,8 +1,8 @@
 @import "semantic-ui";
-$bp-medium: 50em; // 800px
+$bp-medium: 62.5em; // 1000px
 
 .chatbox {
-  height: 450px;
+  height: 95vh;
 }
 
 .time_to_right {
@@ -15,16 +15,11 @@ $bp-medium: 50em; // 800px
 }
 
 @media only screen and (max-width: $bp-medium) {
-  .sidebar-right {
-    display: hidden;
-  }
   .logo {
     display: none;
   }
-  .container {
-    display: table;
-    margin: 0 !important;
-    width: 100% !important;
-    height: 90% !important;
+  .sidebar-left {
+    margin-top: 10px;
+    width: 95vw !important;
   }
 }
