@@ -15,6 +15,7 @@ consumer.subscriptions.create("ChatroomChannel", {
     //$('#msg').append(data.content[0]);
     $('#msg').append('<div class="event"><div class="content"><div class="summary"><em>' + data.content[0] + '</em>: ' + data.content[1].body + '<div class="time_to_right">' + data.content[2] + '</div></div></div></div>')
     //$('#msg').append('<div class="message"> ' + data.content + '</div>')
+    $('#message_content').val('')
   }
 });
 
