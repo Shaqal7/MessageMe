@@ -1,0 +1,22 @@
+<p>
+  <strong>Początek:</strong>
+  <%= @daty.start_date %>
+</p>
+
+<p>
+  <strong>Koniec:</strong>
+  <%= @daty.end_date %>
+</p>
+
+<p>
+  <strong>Lokalizacja:</strong>
+  <%= @daty.localisation %>
+</p>
+
+<p>
+  <strong>Użytkownik:</strong>
+  <%= @daty.user_id %>
+</p>
+
+<%= link_to 'Edytuj', edit_daty_path(@daty) %> |
+<%= link_to 'Cofnij', daties_path %>

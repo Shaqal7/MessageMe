@@ -1,19 +1,20 @@
 <div class="ui small fluid inverted menu">
   <div class="ui container">
-    <%= link_to 'Chatroom', root_path, class: "item" %>
-    <%= link_to 'Links', links_path, class: "item" %>
+    <%= link_to 'Czat', root_path, class: "item" %>
+    <%= link_to 'Linki', links_path, class: "item" %>
+    <%= link_to 'Daty', daties_path, class: "item" %>
     <div class="right menu">
       <% unless user_signed_in? %>
         <div class="item">
           <%= link_to new_user_session_path do %>
-            <div class="ui primary button">Log In</div>
+            <div class="ui primary button">Zaloguj</div>
           <% end %>
         </div>
       <% else %>
         <div class="ui simple dropdown item">
-          Account <i class="dropdown icon"></i>
+          Konto <i class="dropdown icon"></i>
           <div class="menu">
-            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "item" %>
+            <%= link_to 'Wyloguj', destroy_user_session_path, method: :delete, class: "item" %>
           </div>
         </div>
       <% end %>

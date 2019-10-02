@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Daty</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Początek</th>
+      <th>Koniec</th>
+      <th>Lokalizacja</th>
+      <th>Użytkownik</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @daties.each do |daty| %>
+      <tr>
+        <td><%= daty.start_date %></td>
+        <td><%= daty.end_date %></td>
+        <td><%= daty.localisation %></td>
+        <td><%= daty.user.email %></td>
+        <td><%= link_to 'Pokaż', daty %></td>
+        <td><%= link_to 'Edytuj', edit_daty_path(daty) %></td>
+        <td><%= link_to 'Usuń', daty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nowa data', new_daty_path %>
