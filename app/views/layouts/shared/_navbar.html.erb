@@ -3,6 +3,7 @@
     <%= link_to 'Czat', root_path, class: "item" %>
     <%= link_to 'Linki', links_path, class: "item" %>
     <%= link_to 'Daty', daties_path, class: "item" %>
+    <%= link_to 'Wszystkie wiadomości', messages_path, class: "item" %>
     <div class="right menu">
       <% unless user_signed_in? %>
         <div class="item">
