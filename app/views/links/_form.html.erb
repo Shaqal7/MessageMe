@@ -1,9 +1,10 @@
+<%= form_with(model: link, local: true) do |form| %>
   <div class="field">
-    <%= form.label :body %>
+    <%= form.label 'Link' %>
     <%= form.text_field :body %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Utwórz' %>
   </div>
 <% end %>

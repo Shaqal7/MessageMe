@@ -1,0 +1,20 @@
+<%= form_with(model: daty, local: true) do |form| %>
+  <div class="field">
+    <%= form.label 'Początek' %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Koniec' %>
+    <%= form.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Lokalizacja' %>
+    <%= form.text_field :localisation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Utwórz' %>
+  </div>
+<% end %>
