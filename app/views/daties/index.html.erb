@@ -9,6 +9,7 @@
       <th>Koniec</th>
       <th>Lokalizacja</th>
       <th>Użytkownik</th>
+      <th>Czas modyfikacji</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= daty.end_date %></td>
         <td><%= daty.localisation %></td>
         <td><%= daty.user.email %></td>
+        <td><%= time_ago_in_words(daty.created_at) %></td>
         <td><%= link_to 'Pokaż', daty %></td>
         <td><%= link_to 'Edytuj', edit_daty_path(daty) %></td>
         <td><%= link_to 'Usuń', daty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
