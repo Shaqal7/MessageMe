@@ -5,7 +5,7 @@ class DatiesController < ApplicationController
   # GET /daties
   # GET /daties.json
   def index
-    @daties = Daty.all.order(created_at: :desc)
+    @daties = Daty.all.order(updated_at: :desc)
   end
 
   # GET /daties/1
