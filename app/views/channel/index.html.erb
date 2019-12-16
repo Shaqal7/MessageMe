@@ -1,23 +1,19 @@
-<div class="ui one column grid">
-  <div class="sidebar-left">
-    <div class="twelve wide column">
-      <div class="ui fluid raised card chatbox">
-        <div class="content" id="messages">
-          <div class="ui feed" id="msg">
-            <%= render @messages %>
+<div class="twelve wide column">
+  <div class="ui fluid raised card chatbox">
+    <div class="content" id="messages">
+      <div class="ui feed" id="msg">
+        <%= render @messages %>
+      </div>
+    </div>
+    <div class="extra content">
+      <%= form_for(@message, remote: true, html: {class: "ui reply form", role: "form"}, url: message_path) do |f| %>
+        <div class="field">
+          <div class="ui fluid icon input">
+            <%= f.text_field :body, placeholder: "Napisz wiadomość...", id: "message_content", autocomplete: "off" %>
+            <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
           </div>
         </div>
-        <div class="extra content">
-          <%= form_for(@message, remote: true, html: {class: "ui reply form", role: "form"}, url: message_path) do |f| %>
-            <div class="field">
-              <div class="ui fluid icon input">
-                <%= f.text_field :body, placeholder: "Napisz wiadomość...", id: "message_content", autocomplete: "off" %>
-                <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
