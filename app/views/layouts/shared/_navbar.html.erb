@@ -6,15 +6,15 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <% if user_signed_in? %>
-      <li class="nav-item active">
+      <li class="nav-item">
         <%= link_to 'Linki', links_path, class: 'nav-link' %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <%= link_to 'Daty', daties_path, class: 'nav-link' %>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class='fa fa-user'></i>
           <%= current_user.email %>
@@ -24,11 +24,11 @@
           <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
         </div>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
       </li>
       <% else %>
-      <li class="nav-item active">
+      <li class="nav-item">
         <%= link_to 'Log In', new_user_session_path, class: 'nav-link' %>
       </li>
       <% end %>
