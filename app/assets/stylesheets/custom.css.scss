@@ -1,37 +1,4 @@
-@import "semantic-ui";
-$bp-medium: 62.5em; // 1000px
 
-.chatbox {
-  height: 93vh;
-}
-
-.time_to_right {
-  float: right;
-}
-
-#messages {
-  height: 15em;
-  overflow: auto;
-}
-
-.nickname-1 {
-  color: #9B393C;
-}
-.nickname-2 {
-  color: blue;
-}
-
-.time {
-  color: #6B6865;
-  font-weight: 100;
-}
-
-@media only screen and (max-width: $bp-medium) {
-  .sidebar-left {
-    margin-top: 10px;
-    width: 100vw !important;
-  }
-}
 
 
 body,html{
