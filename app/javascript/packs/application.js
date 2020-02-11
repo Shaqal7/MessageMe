@@ -8,6 +8,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+//import { gotoBottom } from './custom';
 //= require semantic-ui
 
 
@@ -19,24 +20,23 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 //
 
-function gotoBottom(id){
-  var element = document.getElementById('messages');
+function gotoBottom(){
+  let element = document.getElementById('messages');
   element.scrollTop = element.scrollHeight - element.clientHeight;
 }
 
+function clear() {
+  let msgcontent = document.getElementById("message_content");
 
-// $('html, body').animate({
-//   //scrollTop: $('footer').offset().top
-//   scrollTop: $('#messages').offset().top
-//   //scrollTop: $('.your-class').offset().top
-// }, 'slow');
-
-// scroll_bottom = function() {
-//   if ($('#messages').length > 0) {
-//     $('#messages').scrollTop($('messages')[0].scrollHeight);
-//   }
-// }
+  msgcontent.addEventListener("keyup", function(event) {
+    if(event.keyCode === 13) {
+      event.preventDefault();
+      msgcontent.value = '';
+    }
+  })
+}
 
 $(document).on('turbolinks:load', function() {
-  gotoBottom('messages');
+  gotoBottom();
+  clear();
 })
